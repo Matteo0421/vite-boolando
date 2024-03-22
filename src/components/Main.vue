@@ -1,4 +1,5 @@
 <script>
+import Productcard from './partials/Productcard.vue'
   export default {
     
   }

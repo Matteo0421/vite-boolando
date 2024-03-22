@@ -38,7 +38,7 @@
 
 
 <style lang="scss" scoped>
-@use '../assets/scss/partials/variabili';
+@use '../assets/scss/partials/variables' as *;
 
 
 header{
@@ -46,7 +46,7 @@ header{
   z-index: 999;
   width: 100%;
   height: 80px;
-  background-color: #FA6903 ;
+  background-color: $my-primary-color ;
   box-shadow: 0 1px 3px rgba(128, 128, 128, 0.896);
   .container{
     height: 100%;
