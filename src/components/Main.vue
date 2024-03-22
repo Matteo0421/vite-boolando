@@ -1,4 +1,5 @@
 <script>
+import db from '../assets/data/db'
 import Productcard from './partials/Productcard.vue'
   export default {
     components:{
@@ -10,9 +11,19 @@ import Productcard from './partials/Productcard.vue'
 <template>
   <div>
     <main>
-      <div class="container">
-        <Productcard />
+      <div class="container ">
+        <div class="row ">
 
+            <!-- CARD  -->
+            <Productcard  
+            v-for="product in products"
+            :key="product.id"
+            :productImage="../../assets/img/products.frontImage"
+            productPrice=""
+            />
+            <!-- /CARD  -->
+            
+        </div>
       </div>
     </main>
   </div>
@@ -22,8 +33,6 @@ import Productcard from './partials/Productcard.vue'
 <style lang="scss" scoped>
 
 main{
-  width: 100%;
-  height: 800px;
+  padding-top: 120px;
 }
-
 </style>
