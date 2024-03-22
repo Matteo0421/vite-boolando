@@ -16,18 +16,20 @@ import Productcard from './partials/Productcard.vue'
 <template>
   <div>
     <main>
-      <div class="container ">
-        <div class="row ">
-
-            <!-- CARD  -->
-            <Productcard  
-            v-for="product in db"
+      <div class="container">
+        <div class="row">
+          <!-- CARD  -->
+          <Productcard
+            v-for="product in db.products"
             :key="product.id"
-            :productImage="'src/assets/img' + product.frontImage"
-            productPrice=""
-            />
-            <!-- /CARD  -->
-            
+            :productImage="`../../assets/img/${product.frontImage}`"
+            :secondaryImage="`../../assets/img/${product.backImage}`"
+            :brand="product.brand"
+            :productName="product.name"
+            :price="product.price"
+            :oldPrice="product.oldPrice"
+          />
+          <!-- /CARD  -->
         </div>
       </div>
     </main>
