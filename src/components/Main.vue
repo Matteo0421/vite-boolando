@@ -22,8 +22,7 @@ import Productcard from './partials/Productcard.vue'
           <Productcard
             v-for="product in db.products"
             :key="product.id"
-            :productImage="`../../assets/img/${product.frontImage}`"
-            :secondaryImage="`../../assets/img/${product.backImage}`"
+            :productImage="'src/assets/img' + product.frontImage"            
             :brand="product.brand"
             :productName="product.name"
             :price="product.price"
