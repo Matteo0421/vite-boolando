@@ -15,7 +15,7 @@
             <div class="card">
               
               <div class="card-images">
-                <img src="../../assets/img/1.webp" alt="1">
+                <img :src="productImage" alt="1">
                 <img class="secondary-image" src="../../assets/img/1b.webp" alt="1">
                 <div class="favourite">
                   <i class="fa-solid fa-heart"></i>

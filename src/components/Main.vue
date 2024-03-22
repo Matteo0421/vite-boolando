@@ -2,6 +2,11 @@
 import db from '../assets/data/db'
 import Productcard from './partials/Productcard.vue'
   export default {
+    data(){
+      return{
+        db
+      }
+    },
     components:{
       Productcard
     }
@@ -16,9 +21,9 @@ import Productcard from './partials/Productcard.vue'
 
             <!-- CARD  -->
             <Productcard  
-            v-for="product in products"
+            v-for="product in db"
             :key="product.id"
-            :productImage="../../assets/img/products.frontImage"
+            :productImage="'src/assets/img' + product.frontImage"
             productPrice=""
             />
             <!-- /CARD  -->
