@@ -1,13 +1,20 @@
 <script>
 import Productcard from './partials/Productcard.vue'
   export default {
-    
+    components:{
+      Productcard
+    }
   }
 </script>
 
 <template>
   <div>
-    <main></main>
+    <main>
+      <div class="container">
+        <Productcard />
+
+      </div>
+    </main>
   </div>
 </template>
 
