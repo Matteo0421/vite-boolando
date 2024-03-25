@@ -4,8 +4,13 @@ import Productcard from './partials/Productcard.vue'
   export default {
     data(){
       return{
-        db
+        db,
+        dbArray: null
       }
+    },
+    mounted(){
+
+      this.dbArray = this.db.products
     },
     components:{
       Productcard
@@ -22,7 +27,8 @@ import Productcard from './partials/Productcard.vue'
           <Productcard
             v-for="product in db.products"
             :key="product.id"
-            :productImage="'src/assets/img' + product.frontImage"            
+            :productImage="product.frontImage"            
+            :secondaryImage="product.backImage"            
             :brand="product.brand"
             :productName="product.name"
             :price="product.price"

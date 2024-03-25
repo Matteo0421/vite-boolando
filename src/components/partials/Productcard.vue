@@ -7,6 +7,11 @@ export default {
     productName: String,
     price: String,
     oldPrice: String
+  },
+  methods:{
+    getPathImage(imageName){
+      return new URL(`../../assets/img/${imageName}`, import.meta.url).href
+    }
   }
 }
 </script>
@@ -16,8 +21,8 @@ export default {
     <!-- CARD  -->
     <div class="card">
       <div class="card-images">
-        <img :src="productImage" alt="1">
-        <img class="secondary-image" :src="secondaryImage" alt="1">
+        <img :src="getPathImage(productImage)" alt="1">
+        <img class="secondary-image" :src="getPathImage(secondaryImage)" alt="1">
         <div class="favourite">
           <i class="fa-solid fa-heart"></i>
         </div>
@@ -32,7 +37,7 @@ export default {
         <div class="product-name">{{ productName }}</div>
         <div class="price">
           <span>{{ price }} &euro;</span>
-          <del>{{ oldPrice }} &euro;</del>
+          <span>{{ oldPrice }} &euro;</span>
         </div>
       </div>
     </div>
